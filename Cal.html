@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="Cal.css">
+</head>
+<body class="body">
+    <script>
+        function addfunc() {
+            var x = document.getElementById("num1").value;
+            var y = document.getElementById("num2").value;
+            var z = +x + +y;
+            document.getElementById("ans").value=z;
+        }
+        function minfunc() {
+            var x = document.getElementById("num1").value;
+            var y = document.getElementById("num2").value;
+            var z = x - y;
+            document.getElementById("ans").value=z;
+        }
+        function mulfunc() {
+            var x = document.getElementById("num1").value;
+            var y = document.getElementById("num2").value;
+            var z = x * y;
+            document.getElementById("ans").value=z;
+        }
+        function divfunc() {
+            var x = document.getElementById("num1").value;
+            var y = document.getElementById("num2").value;
+            var z = x / y;
+            document.getElementById("ans").value=z;
+        }
+        function clr() {
+            document.getElementById("ans").value = "";
+            document.getElementById("num1").value = "";
+            document.getElementById("num2").value = "";
+        }
+    </script>
+        <table border="2">
+            <caption>Calculator</caption>
+            <tr>
+                <td>Enter first num</td>
+                <td><input type="text" class="tb" id="num1" placeholder="0"></td>
+            </tr>
+            <tr>
+                <td>Enter second num</td>
+                <td><input type="text" class="tb" id="num2" placeholder="0"></td>
+            </tr>
+            <tr>
+                <td>
+                    <center>
+                        <input type="button" class="btn" onclick="addfunc()" value="+">
+                        <input type="button" class="btn" onclick="minfunc()" value="-">
+                    </center>
+                </td>
+                <td>
+                    <center>
+                        <input type="button" class="btn" onclick="mulfunc()" value="*">
+                        <input type="button" class="btn" onclick="divfunc()" value="/">
+                    </center>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="text" class="tb" id="ans" placeholder="Answer">
+                    <input type="button" class="btn" onclick="clr()" value="Clear All">
+                </td>
+            </tr>
+        </table>
+        <style>
+            .body{
+                background-color: rgba(0,0,0,.7);
+            }
+            .btn{
+                background-color: firebrick;
+            }
+            .tb{
+                background-color: rgba(0,0,0,.7);
+            }
+        </style>    
+</body>
+</html>
